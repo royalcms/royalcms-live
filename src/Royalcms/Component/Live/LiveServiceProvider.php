@@ -2,10 +2,11 @@
 
 namespace Royalcms\Component\Live;
 
+use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use Royalcms\Component\Live\Paas\Room;
 
-class LiveServiceProvider extends BaseServiceProvider
+class LiveServiceProvider extends BaseServiceProvider implements DeferrableProvider
 {
     /**
      * Bootstrap the application services.
@@ -37,6 +38,16 @@ class LiveServiceProvider extends BaseServiceProvider
         $this->publishes([$source => config_path('live.php')], 'config');
 
         $this->mergeConfigFrom($source, 'live');
+    }
+
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return ['live'];
     }
 
 }
