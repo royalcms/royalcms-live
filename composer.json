@@ -1,0 +1,47 @@
+{
+    "name": "royalcms/live",
+    "description": "An live SDK for vhall Pass web api.",
+    "keywords": [
+        "laravel",
+        "royalcms",
+        "live",
+        "vhall",
+    ],
+    "homepage": "https://github.com/royalcms/royalcms-live",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Royal Wang",
+            "email": "hxroyal@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5",
+        "illuminate/support": "^6.0|^7.0",
+    },
+    "suggest": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Royalcms\\Component\\Live\\": "src/Royalcms/Component/Live"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "7.0-dev"
+        },
+        "royalcms": {
+            "providers": [
+                "Royalcms\\Component\\Live\\LiveServiceProvider"
+            ],
+            "aliases": {
+                "RC_Live": "Royalcms\\Component\\Live\\Facades\\Live"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    }
+}
