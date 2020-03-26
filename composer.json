@@ -5,7 +5,7 @@
         "laravel",
         "royalcms",
         "live",
-        "vhall",
+        "vhall"
     ],
     "homepage": "https://github.com/royalcms/royalcms-live",
     "license": "MIT",
@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": "^7.2.5",
-        "illuminate/support": "^6.0|^7.0",
+        "illuminate/support": "^6.0|^7.0"
     },
     "suggest": {
     },
