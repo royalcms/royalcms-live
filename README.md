@@ -16,8 +16,8 @@ use Royalcms\Component\Live\Paas\Room;
 use Royalcms\Component\Live\Paas\Document;
 
 $config = [
-	'appId' => 'xxxx', // 控制台中获取
-	'secretKey' => 'xxx', // 控制台中获取
+	'app_id' => 'xxxx', // 控制台中获取
+	'secret_key' => 'xxx', // 控制台中获取
 	'show_request_url' => false, // 是否显示构造请求连接&参数 json console (请勿在生产环境打开)
 	'show_request_data' => false, // 是否显示接口返回数据 json console (请勿在生产环境打开)
 ];
