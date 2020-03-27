@@ -26,15 +26,15 @@ abstract class Common {
 		if (!is_array($config)) {
 			throw new Exception('配置文件类型不正确');
 		}
-		if (!isset($config['appId'])) {
-			throw new Exception('appId 为必选项');
+		if (!isset($config['app_id'])) {
+			throw new Exception('app_id 为必选项');
 		}
-		if (!isset($config['secretKey'])) {
-			throw new Exception('secretKey 为必选项');
+		if (!isset($config['secret_key'])) {
+			throw new Exception('secret_key 为必选项');
 		}
 
-		$this->appId          = $config['appId'];
-		$this->secretKey       = $config['secretKey'];
+		$this->appId          = $config['app_id'];
+		$this->secretKey       = $config['secret_key'];
 		$this->requestDomain   = isset($config['request_domain']) ? $config['request_domain'] : 'api.vhallyun.com';
 		$this->showRequestUrl  = isset($config['show_request_url']) ? $config['show_request_url'] : false;
 		$this->showRequestData = isset($config['show_request_data']) ? $config['show_request_data'] : false;
