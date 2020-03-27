@@ -26,7 +26,7 @@ class LiveServiceProvider extends BaseServiceProvider implements DeferrableProvi
         $app = $this->app;
 
         $app->singleton('live', function($app) {
-            return new LiveManager();
+            return new LiveManager($app);
         });
 
     }
