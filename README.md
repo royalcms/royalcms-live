@@ -2,15 +2,15 @@
 
 ## 安装
 
-* 通过composer，这是推荐的方式，可以使用composer.json 声明依赖，或者运行下面的命令。
+> 通过composer，这是推荐的方式，可以使用composer.json 声明依赖，或者运行下面的命令。
+
 ```
 $ composer require royalcms/live
 ```
 
 ## 使用方法
 
-### 上传
-1 使用composer形式
+#### 1 使用composer形式
 ```php
 use Royalcms\Component\Live\Paas\Room;
 use Royalcms\Component\Live\Paas\Document;
@@ -45,7 +45,7 @@ $resultCreate = $roomObj->create($params);
 
 ```
 
-2 直接引入使用
+#### 2 直接引入使用
 ```php
 // 创建房间
 $resultCreate = RC_Live::room()->create($params);
