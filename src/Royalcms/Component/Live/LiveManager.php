@@ -6,6 +6,7 @@ namespace Royalcms\Component\Live;
 
 use Illuminate\Cache\CacheManager;
 use Royalcms\Component\Live\Paas\Base;
+use Royalcms\Component\Live\Paas\Channel;
 use Royalcms\Component\Live\Paas\Room;
 
 class LiveManager
@@ -112,6 +113,17 @@ class LiveManager
     protected function createBaseDriver(array $config)
     {
         return new Base($config);
+    }
+
+    /**
+     * Create an instance of the APC cache driver.
+     *
+     * @param  array  $config
+     * @return
+     */
+    protected function createChannelDriver(array $config)
+    {
+        return new Channel($config);
     }
 
     /**
